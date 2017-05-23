@@ -16,7 +16,8 @@ namespace ICTProject.Models
             // Add custom user claims here
             return userIdentity;
         }
-        public string RealName { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public int UserLevel { get; set; }
         public int ZoneID { get; set; }
         public int RegionID { get; set; }

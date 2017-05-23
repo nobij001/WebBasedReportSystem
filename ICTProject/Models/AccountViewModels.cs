@@ -80,12 +80,19 @@ namespace ICTProject.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        [Display(Name = "Real Name")]
-        public string RealName { get; set; }
+        [Required]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
 
+        [Required]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Required]
         [Display(Name = "Zone ID")]
         public int ZoneID { get; set; }
 
+        [Required]
         [Display(Name = "Region ID")]
         public int RegionID { get; set; }
     }
