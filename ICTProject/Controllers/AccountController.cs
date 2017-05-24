@@ -156,6 +156,9 @@ namespace ICTProject.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+
+                    await _userManager.AddClaimAsync(user.Id, new Claim("FirstName", user.FirstName));
+                    await _userManager.AddClaimAsync(user.Id, new Claim("LastName", user.LastName));
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link

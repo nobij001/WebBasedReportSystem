@@ -31,6 +31,8 @@ namespace ICTProject.Models
         {
         }
 
+        public DbSet AspNetRegions { get; set; }
+        public DbSet AspNetZones { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
