@@ -197,7 +197,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Data\DbcContext.cs" />
     <Compile Include="Data\TestData.cs" />
     <Compile Include="Global.asax.cs">
@@ -234,6 +233,10 @@
     <Compile Include="Migrations\DBC\201705240453289_Rev6.cs" />
     <Compile Include="Migrations\DBC\201705240453289_Rev6.Designer.cs">
       <DependentUpon>201705240453289_Rev6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\DBC\201705240822415_Rev7.cs" />
+    <Compile Include="Migrations\DBC\201705240822415_Rev7.Designer.cs">
+      <DependentUpon>201705240822415_Rev7.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DBC\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -348,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\DBC\201705240453289_Rev6.resx">
       <DependentUpon>201705240453289_Rev6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\DBC\201705240822415_Rev7.resx">
+      <DependentUpon>201705240822415_Rev7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
