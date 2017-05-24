@@ -1,0 +1,5 @@
+﻿Enable-Migrations -ContextTypeName DbcContext -MigrationsDirectory Migrations\DBC
+
+Add-Migration -ConfigurationTypeName ICTProject.Migrations.DBC.Configuration "Init"
+
+Update-Database -ConfigurationTypeName ICTProject.Migrations.DBC.Configuration
