@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using ICTProject.Models.DBC;
 using ICTProject.Data;
+using System.Web.Security;
+using System.Web.UI.WebControls;
 
 namespace ICTProject.Controllers
 {
@@ -44,30 +46,40 @@ namespace ICTProject.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(User account)
+        public ActionResult Login(User l, string ReturnUrl = "")
         {
             using(DbcContext db = new DbcContext())
             {
-                var usr = db.Users.Where(u => u.Username == account.Username && u.Password == account.Password).FirstOrDefault();
-                if(usr != null)
+                var user = db.Users.Where(a => a.Username.Equals(l.Username) && a.Password.Equals(l.Password)).FirstOrDefault();
+                if(user != null)
                 {
-                    Session["UserID"] = usr.UserId.ToString();
-                    Session["Username"] = usr.Username.ToString();
-                    return RedirectToAction("LoggedIn");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Username or password is incorrect.");
+                    var name = l.Username;
+                    FormsAuthentication.SetAuthCookie(l.Username, l.RememberMe);
+                    if(Url.IsLocalUrl(ReturnUrl))
+                    {
+                        return Redirect(ReturnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("LoggedIn");
+                    }
                 }
             }
+            ModelState.Remove("Password");
             return View();
         }
+
+        [Authorize]
         public ActionResult LoggedIn()
         {
-            if (Session["UserId"] != null)
-                return View();
-            else
-                return RedirectToAction("Login");
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -36,6 +36,7 @@ namespace ICTProject.Models.DBC
         [MaxLength(128)]
         public string LastName { get; set; }
 
+        public Boolean RememberMe { get; set; }
         public Boolean Inactive { get; set; }
         public Zone ZoneId { get; set; }
         public Region RegionId { get; set; }

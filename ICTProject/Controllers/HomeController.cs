@@ -8,6 +8,7 @@ namespace ICTProject.Controllers
 {
     public class HomeController : Controller
     {
+        [AllowAnonymous] // This is what you see when you're not logged in.
         public ActionResult Index()
         {
             return View();
