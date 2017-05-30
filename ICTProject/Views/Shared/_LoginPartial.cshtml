@@ -1,13 +1,16 @@
-﻿@using Microsoft.AspNet.Identity
-@if (Request.IsAuthenticated)
-{
-    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+﻿@model ICTProject.Models.DBC.User
+DbcContext db = new DbcContext()
     {
-    @Html.AntiForgeryToken()
+        var usr = db.Users.Where(u => u.Username == account.Username && u.Password == account.Password).FirstOrDefault();
+        if (usr != null)
+        
+    Session["UserID"] = usr.UserId.ToString();
+    Session["Username"] = usr.Username.ToString();
+    return RedirectToAction("LoggedIn");
 
     <ul class="nav navbar-nav navbar-right">
         <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            @Html.ActionLink("Hello, " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
     </ul>

@@ -34,7 +34,7 @@ namespace ICTProject.Controllers
                 ModelState.Clear();
                 ViewBag.Message = account.FirstName + " " + account.LastName + " successfully registered.";
             }
-            return View();
+            return RedirectToAction("Login");
         }
 
         //Logging in.
