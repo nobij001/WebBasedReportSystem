@@ -18,6 +18,7 @@ namespace ICTProject.Controllers
             return View();
         }
 
+        // GET: Register
         public ActionResult Register()
         {
             return View();
@@ -53,7 +54,6 @@ namespace ICTProject.Controllers
                 var user = db.Users.Where(a => a.Username.Equals(l.Username) && a.Password.Equals(l.Password)).FirstOrDefault();
                 if(user != null)
                 {
-                    var name = l.Username;
                     FormsAuthentication.SetAuthCookie(l.Username, l.RememberMe);
                     if(Url.IsLocalUrl(ReturnUrl))
                     {
