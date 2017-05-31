@@ -40,5 +40,6 @@ namespace ICTProject.Models.DBC
         public Boolean Inactive { get; set; }
         public Zone ZoneId { get; set; }
         public Region RegionId { get; set; }
+        public Positions PositionId { get; set; }
     }
 }

@@ -21,5 +21,8 @@ namespace ICTProject.Data
         public DbSet<SdcDetails> SdcDetails { get; set; }
         public DbSet<SdcNightly> SdcNightly { get; set; }
         public DbSet<Notices> Notices { get; set; }
+        public DbSet<International> International { get; set; }
+        public DbSet<Positions> Positions { get; set; }
+        public DbSet<PDTopics> PDTopics { get; set; }
     }
 }

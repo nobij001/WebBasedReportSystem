@@ -10,6 +10,7 @@ namespace ICTProject.Models.DBC
         public int SdcDetailsId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public DateTime DateAdded { get; set; }
         public int IsTeamCoordinator { get; set; }
         public int IsFullTime { get; set; }
         public Region RegionId { get; set; }

@@ -246,11 +246,16 @@
     <Compile Include="Migrations\DBC\201705302244318_Rev9.Designer.cs">
       <DependentUpon>201705302244318_Rev9.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\DBC\201705310123413_Rev10.cs" />
+    <Compile Include="Migrations\DBC\201705310123413_Rev10.Designer.cs">
+      <DependentUpon>201705310123413_Rev10.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DBC\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DBC\DailyData.cs" />
     <Compile Include="Models\DBC\International.cs" />
     <Compile Include="Models\DBC\Notices.cs" />
+    <Compile Include="Models\DBC\PDTopics.cs" />
     <Compile Include="Models\DBC\Positions.cs" />
     <Compile Include="Models\DBC\Region.cs" />
     <Compile Include="Models\DBC\SdcDetails.cs" />
@@ -369,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\DBC\201705302244318_Rev9.resx">
       <DependentUpon>201705302244318_Rev9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\DBC\201705310123413_Rev10.resx">
+      <DependentUpon>201705310123413_Rev10.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

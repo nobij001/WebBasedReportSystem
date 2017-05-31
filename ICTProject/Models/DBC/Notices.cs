@@ -11,5 +11,6 @@ namespace ICTProject.Models.DBC
         public DateTime Date { get; set; }
         public User UserId { get; set; }
         public string Message { get; set; }
+        public Region RegionId { get; set; }
     }
 }
