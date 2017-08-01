@@ -250,6 +250,10 @@
     <Compile Include="Migrations\DBC\201705310123413_Rev10.Designer.cs">
       <DependentUpon>201705310123413_Rev10.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\DBC\201708010124399_update-databse.cs" />
+    <Compile Include="Migrations\DBC\201708010124399_update-databse.Designer.cs">
+      <DependentUpon>201708010124399_update-databse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DBC\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DBC\DailyData.cs" />
@@ -266,6 +270,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Controllers\DailyDatasController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DBC.mdf" />
@@ -331,6 +336,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\LoggedIn.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\DailyDatas\Create.cshtml" />
+    <Content Include="Views\DailyDatas\Delete.cshtml" />
+    <Content Include="Views\DailyDatas\Details.cshtml" />
+    <Content Include="Views\DailyDatas\Edit.cshtml" />
+    <Content Include="Views\DailyDatas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -377,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\DBC\201705310123413_Rev10.resx">
       <DependentUpon>201705310123413_Rev10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\DBC\201708010124399_update-databse.resx">
+      <DependentUpon>201708010124399_update-databse.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -19,5 +19,7 @@ namespace ICTProject.Models.DBC
         public int Classes { get; set; }
         public float EquipmentSales { get; set; }
         public int Interviews { get; set; }
+
+        public SdcDetails SdcDetailsID { get; set; }
     }
 }

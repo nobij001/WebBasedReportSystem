@@ -1,0 +1,93 @@
+﻿@model IEnumerable<ICTProject.Models.DBC.DailyData>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkingSDC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Appointments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Presentations)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SuccessfulPresentations)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Attendance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Members)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NinthKyus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Classes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EquipmentSales)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Interviews)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkingSDC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Appointments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Presentations)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SuccessfulPresentations)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Attendance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Members)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NinthKyus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Classes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EquipmentSales)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Interviews)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DailyDataId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DailyDataId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DailyDataId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,106 @@
+﻿@model ICTProject.Models.DBC.DailyData
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DailyData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingSDC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkingSDC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Appointments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Appointments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Presentations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Presentations)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuccessfulPresentations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuccessfulPresentations)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attendance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attendance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Members)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Members)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NinthKyus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NinthKyus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Classes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipmentSales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipmentSales)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interviews)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interviews)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DailyDataId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
