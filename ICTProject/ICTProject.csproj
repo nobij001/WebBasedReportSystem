@@ -255,6 +255,14 @@
     <Compile Include="Migrations\DBC\201708010124399_update-databse.Designer.cs">
       <DependentUpon>201708010124399_update-databse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\DBC\201708150027506_UserInt.cs" />
+    <Compile Include="Migrations\DBC\201708150027506_UserInt.Designer.cs">
+      <DependentUpon>201708150027506_UserInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\DBC\201708150044326_International.cs" />
+    <Compile Include="Migrations\DBC\201708150044326_International.Designer.cs">
+      <DependentUpon>201708150044326_International.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DBC\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DBC\DailyData.cs" />
@@ -392,6 +400,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\DBC\201708010124399_update-databse.resx">
       <DependentUpon>201708010124399_update-databse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\DBC\201708150027506_UserInt.resx">
+      <DependentUpon>201708150027506_UserInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\DBC\201708150044326_International.resx">
+      <DependentUpon>201708150044326_International.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
