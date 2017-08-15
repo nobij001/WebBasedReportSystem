@@ -41,6 +41,6 @@ namespace ICTProject.Models.DBC
         public Zone ZoneId { get; set; }
         public Region RegionId { get; set; }
         public Positions PositionId { get; set; }
-        public Internationals InternationalId { get; set; }
+
     }
 }
