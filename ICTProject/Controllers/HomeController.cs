@@ -13,5 +13,9 @@ namespace ICTProject.Controllers
         {
             return View();
         }
+        public ActionResult TestNav()
+        {
+            return View();
+        }
     }
 }
